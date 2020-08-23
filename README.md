@@ -27,8 +27,18 @@ mvnw spring-boot:run
 ```
  
 ## Links
-Links to use search application
-* [Email reducer API](localhost:8080/email/reduce)
+Links to use email-service application
+* Email reducer API (POST - http:://localhost:8080/email/reduce)
+```
+{
+    "userId": "jmoll",
+    "addresses": ["test.email@gmail.com",
+                  "test.email@gmail.com",
+                  "test.email+spam@gmail.com",
+                   "testemail@gmail.com"
+    ]
+}
+```
 
 
 ## Help
