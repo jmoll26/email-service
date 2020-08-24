@@ -43,4 +43,4 @@ Links to use email-service application
 
 ## Help
 
-PPlease send any questions to jmoll26@gmail.com
+Please send any questions to jmoll26@gmail.com
