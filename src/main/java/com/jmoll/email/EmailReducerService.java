@@ -18,7 +18,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailReducerService {
 
-	public int getUniqueAddresses(List<String> unfilteredAddresses) {
+	/**
+	 * Calculates how many unique addresses are in the list of addresses received.
+	 * 
+	 * @param unfilteredAddresses
+	 * @return count of unique addresses
+	 */
+	public int getUniqueAddresses(final List<String> unfilteredAddresses) {
 		final Set<String> uniqueAddresses = new HashSet<>(filterInvalid(unfilteredAddresses));
 		final Set<String> filteredAddresses = new HashSet<>();
 		
@@ -39,13 +45,21 @@ public class EmailReducerService {
 	 * @param emailAddress
 	 * @return recipient
 	 */
-	private String getRecipient(String emailAddress) {
+	private String getRecipient(final String emailAddress) {
 		final String separator = emailAddress.contains("+") ? "+" : "@";
 
 		return StringUtils.substringBefore(emailAddress, separator);
 	}
 	
-	private List<String> filterInvalid(List<String> unfilteredAddresses) {
-		return unfilteredAddresses.stream().filter(item -> null != item && !item.isEmpty()).collect(Collectors.toList());
+	/**
+	 * Removes any null or empty addresses
+	 * 
+	 * @param unfilteredAddresses
+	 * @return addresses that pass basic filtering
+	 */
+	private List<String> filterInvalid(final List<String> unfilteredAddresses) {
+		return unfilteredAddresses.stream()
+				.filter(item -> null != item && !item.isEmpty())
+				.collect(Collectors.toList());
 	}
 }

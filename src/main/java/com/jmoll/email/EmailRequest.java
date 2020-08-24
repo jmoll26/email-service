@@ -30,18 +30,18 @@ public class EmailRequest {
 	}
 	
 	public List<String> getAddresses() {
+		if (null == addresses) {
+			return new ArrayList<>();
+		}
+		
 		return addresses;
 	}
 	
 	public void setAddresses(List<String> addresses) {
-		if (null == addresses) {
-			this.addresses = new ArrayList<>();
-		} else {
-			this.addresses = addresses;
-		}
+		this.addresses = addresses;
 	}
 	
 	public int getTotalCount() {
-		return addresses.size();
+		return getAddresses().size();
 	}
 }
