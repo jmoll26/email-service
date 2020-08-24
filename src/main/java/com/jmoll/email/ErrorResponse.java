@@ -1,4 +1,4 @@
-package com.jmoll.email.exception;
+package com.jmoll.email;
 
 import java.time.LocalDateTime;
 import java.util.Map;
