@@ -14,8 +14,8 @@ This application provides a basic set of filtering/reducing logic to obtain a co
 To install this example application, run the following commands:
 
 ```bash
-git clone https://github.com/jmoll26/jm-email-service.git
-cd zsearch
+git clone https://github.com/jmoll26/email-service.git
+cd email-service
 ```
 
 This will get a copy of the project installed locally. To install all of its dependencies and start each app, follow the instructions below.
