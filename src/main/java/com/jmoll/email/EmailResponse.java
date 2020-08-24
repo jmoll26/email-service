@@ -9,12 +9,12 @@ package com.jmoll.email;
 public class EmailResponse {
 	private final String message;
 	private final int totalAddressCount;
-	private final int uniqueAddressCount;
+	private final int distinceAddressCount;
 	
-	public EmailResponse(String message, int totalAddressCount, int uniqueAddressCount) {
+	public EmailResponse(String message, int totalAddressCount, int distinceAddressCount) {
 		this.message = message;
 		this.totalAddressCount = totalAddressCount;
-		this.uniqueAddressCount = uniqueAddressCount;
+		this.distinceAddressCount = distinceAddressCount;
 	}
 	
 	public String getMessage() {
@@ -23,7 +23,7 @@ public class EmailResponse {
 	public int getTotalAddressCount() {
 		return totalAddressCount;
 	}
-	public int getUniqueAddressCount() {
-		return uniqueAddressCount;
+	public int getDistinctAddressCount() {
+		return distinceAddressCount;
 	}
 }
